@@ -1,26 +1,26 @@
 import unittest
-from hero import Heroi
+from hero import Hero
 
-class TestHeroi(unittest.TestCase):
-    def test_ataque_mago(self):
-        heroi = Heroi("Merlin", 200, "Mago")
-        self.assertEqual(heroi.atacar(), "o mago atacou usando magia")
+class TestHero(unittest.TestCase):
+    def test_attack_mage(self):
+        hero = Hero("Merlin", 200, "Mage")
+        self.assertEqual(hero.attack(), "the mage attacked using magic")
 
-    def test_ataque_guerreiro(self):
-        heroi = Heroi("Conan", 35, "Guerreiro")
-        self.assertEqual(heroi.atacar(), "o guerreiro atacou usando espada")
+    def test_attack_warrior(self):
+        hero = Hero("Conan", 35, "Warrior")
+        self.assertEqual(hero.attack(), "the warrior attacked using sword")
 
-    def test_ataque_monge(self):
-        heroi = Heroi("Li Mei", 28, "Monge")
-        self.assertEqual(heroi.atacar(), "o monge atacou usando artes marciais")
+    def test_attack_monk(self):
+        hero = Hero("Li Mei", 28, "Monk")
+        self.assertEqual(hero.attack(), "the monk attacked using martial arts")
 
-    def test_ataque_ninja(self):
-        heroi = Heroi("Hanzo", 40, "Ninja")
-        self.assertEqual(heroi.atacar(), "o ninja atacou usando shuriken")
+    def test_attack_ninja(self):
+        hero = Hero("Hanzo", 40, "Ninja")
+        self.assertEqual(hero.attack(), "the ninja attacked using shuriken")
 
-    def test_tipo_desconhecido(self):
-        heroi = Heroi("Desconhecido", 30, "Pirata")
-        self.assertEqual(heroi.atacar(), "o pirata atacou usando ataque desconhecido")
+    def test_unknown_type(self):
+        hero = Hero("Unknown", 30, "Pirate")
+        self.assertEqual(hero.attack(), "the pirate attacked using unknown attack")
 
 if __name__ == '__main__':
     unittest.main()
