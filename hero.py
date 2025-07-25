@@ -1,20 +1,20 @@
-class Heroi:
-    def __init__(self, nome, idade, tipo):
-        self.nome = nome
-        self.idade = idade
-        self.tipo = tipo.lower()
+class Hero:
+    def __init__(self, name, age, hero_type):
+        self.name = name
+        self.age = age
+        self.hero_type = hero_type.lower()
 
-    def atacar(self):
-        ataques = {
-            "mago": "magia",
-            "guerreiro": "espada",
-            "monge": "artes marciais",
+    def attack(self):
+        attacks = {
+            "mage": "magic",
+            "warrior": "sword",
+            "monk": "martial arts",
             "ninja": "shuriken"
         }
 
-        ataque = ataques.get(self.tipo, "ataque desconhecido")
-        return f"o {self.tipo} atacou usando {ataque}"
+        attack = attacks.get(self.hero_type, "unknown attack")
+        return f"the {self.hero_type} attacked using {attack}"
 
 if __name__ == "__main__":
-    heroi1 = Heroi("Gandalf", 150, "Mago")
-    print(heroi1.atacar())
+    hero1 = Hero("Gandalf", 150, "Mage")
+    print(hero1.attack())
